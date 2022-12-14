@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CFDSA Pre-Course Assignment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body,
+        h1 {
+            font-family: "Raleway", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        a {
+            color: #2196f3;
+        }
+
+        .bgimg {
+            background: url('20180812_095204.jpg');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .box-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-radius {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+
+        .text-gradient {
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ff1744 0%, #FFC107 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            CFDSA
+        </div>
+        <div class="w3-display-middle">
+            <h1 id="dynamic-text" class="w3-jumbo w3-animate-top">
+                <!-- Dyanmic Text -->
+            </h1>
+            <hr class="w3-border-grey" style="margin:auto;width:40%">
+            <div class="box-center">
+                <p class="w3-large w3-center w3-text-black box-radius">
+                    <strong class="text-gradient">Repository</strong> <a href="https://github.com/jinqiangg/cfdsa"
+                        target="_blank">https://github.com/jinqiangg/cfdsa</a>
+                </p>
+            </div>
+        </div>
+        <div class="w3-display-bottomleft w3-padding-large">
+            @jinqiangg
+        </div>
+    </div>
+
+</body>
+<script>
+    var textArray = [
+        "Logic will get you from A to B. Imagination will take you everywhere",
+        "There are 10 kinds of people. Those who know binary and those who don&apos;t.",
+        "There are two ways of constructing a software design. One way is to make it so simple that there are obviously no deficiencies and the other is to make it so complicated that there are no obvious deficiencies.",
+        "It&apos;s not that I&apos;m so smart, it&apos;s just that I stay with problems longer.",
+        "It is pitch dark. You are likely to be eaten by a grue."
+    ];
+    var randomNumber = Math.floor(Math.random() * textArray.length);
+    document.getElementById("dynamic-text").innerHTML = textArray[randomNumber];
+</script>
+
+</html>
