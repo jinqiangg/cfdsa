@@ -11,7 +11,7 @@ git clone https://github.com/jinqiangg/cfdsa
 ```
 - Install dependencies
 ```
-cd <project_name>
+cd cfdsa/workshop01
 npm install
 ```
 - Build and run the project
