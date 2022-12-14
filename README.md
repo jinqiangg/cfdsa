@@ -34,4 +34,3 @@ The folder structure (workshop01) of this app is explained below:
 | app.js                    | Entry point to express app                                                               |
 | index.html                | Landing page of this web app                                                              |
 | package.json             | Contains npm dependencies |
-```
