@@ -33,5 +33,5 @@ The folder structure (workshop01) of this app is explained below:
 | **src**                  | Contains media source like image                                                           |
 | app.js                    | Entry point to express app                                                               |
 | index.html                | Landing page of this web app                                                              |
-| package.json             | Contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped) |
+| package.json             | Contains npm dependencies |
 ```
