@@ -1,0 +1,33 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: codeserver-ing
+  labels:
+    name: codeserver-ing
+    app: codeserver
+  namespace: codeserverns
+  annotations: 
+    nginx.ingress.kubernetes.io/limit-rps: "10"
+    nginx.ingress.kubernetes.io/auth-url: "https://$host/oauth2/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "https://$host/oauth2/start?rd=$escaped_request_uri"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: codeserver-146.190.193.112.nip.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: codeserver-svc
+            port:
+              number: 8443
+      # - path: /oauth2
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: oauth2-svc
+      #       port:
+      #         number: 4180
