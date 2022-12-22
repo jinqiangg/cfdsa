@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio-secret
+  labels:
+    name: minio-secret
+    app: minio
+  namespace: minio
+data:
+  # admin
+  MINIO_ROOT_USER: bWluaW9hZG1pbg==
+  MINIO_ROOT_PASSWORD: bWluaW9hZG1pbg==
+
+
